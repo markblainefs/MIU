@@ -291,7 +291,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	//Variable defaults
-	var locations = ["-Choose a Location-", "Home", "Car", "Errand"],
+	var locations = ["-Choose a Location-", "Home", "Office", "Car", "Shop", "Errand"],
 		priorityValue,
 		errMsg = $('errors');
 
