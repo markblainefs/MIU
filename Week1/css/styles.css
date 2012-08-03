@@ -7,9 +7,6 @@ July 2012
 body {	
 	font-family: Arial, Helvetica, sans-serif;
 	color: white;
-	background:url('../images/smallBurst.gif');
-	background-size: 100%;
-	background-repeat: no-repeat;
 	background-color:#3b3a3a;
 }
 
@@ -23,7 +20,7 @@ h1 {
 }
 
 h2 {
-	text-transform: capitalize;
+	margin: 20px 0 5px 0;
 }
 
 p {
@@ -83,8 +80,4 @@ a {
 	color: white;
 	margin-right: 15px;
 	margin-bottom: 15px;
-}
-
-a:hover {
-	color: red;
 }

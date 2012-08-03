@@ -6,7 +6,7 @@
 window.addEventListener("DOMContentLoaded", function(){
 
 	//getElementsById Function
-	function $(x){
+	function ge(x){
 		var theElement = document.getElementById(x);
 		return theElement;
 	}
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	//Create select field element and populate with options
 	function makeList(){
 		var formTag = document.getElementsByTagName("form"),  // formTag is an array of all the form tags
-			selectLi = $('select'),
+			selectLi = ge('select'),
 			makeSelect = document.createElement('select');
 			makeSelect.setAttribute("id", "groups");
 		for (var i=0, j=locations.length; i<j; i++){
@@ -41,19 +41,19 @@ window.addEventListener("DOMContentLoaded", function(){
 	function toggleControls(n){
 		switch(n){
 			case "on":
-				$('honeyForm').style.display = "none";
-				$('clear').style.display = "inline";
-				$('displayLink').style.display = "none";
-				$('addNew').style.display = "inline";
-				$('listHeader').style.display = "inline";
+				ge('honeyForm').style.display = "none";
+				ge('clear').style.display = "inline";
+				ge('displayLink').style.display = "none";
+				ge('addNew').style.display = "inline";
+				ge('listHeader').style.display = "inline";
 				break;
 			case "off":
-				$('honeyForm').style.display = "block";
-				$('clear').style.display = "inline";
-				$('displayLink').style.display = "inline";
-				$('addNew').style.display = "none";
-				$('listHeader').style.display = "none";
-				$('items').style.display = "none";
+				ge('honeyForm').style.display = "block";
+				ge('clear').style.display = "inline";
+				ge('displayLink').style.display = "inline";
+				ge('addNew').style.display = "none";
+				ge('listHeader').style.display = "none";
+				ge('items').style.display = "none";
 				break;
 			default:
 				return false;
@@ -77,13 +77,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Gather up all of our form field values and store in an object
 		//Object properties are going to contain an array with the form label and input value.
 		var item			= {};
-			item.taskName 	= ["Task name:", $('taskName').value];
-			item.group		= ["Location:", $('groups').value];
-			item.dueDate	= ["Due date:", $('dueDate').value];
-			item.importance	= ["Importance:", $('importance').value];
+			item.taskName 	= ["Task name:", ge('taskName').value];
+			item.group		= ["Location:", ge('groups').value];
+			item.dueDate	= ["Due date:", ge('dueDate').value];
+			item.importance	= ["Importance:", ge('importance').value];
 			item.priority 	= ["Because:", priorityValue];
-			item.honey 		= ["List for:", $('forHoney').value];
-			item.specialInstructions = ["Details:", $('specialInstructions').value];
+			item.honey 		= ["List for:", ge('forHoney').value];
+			item.specialInstructions = ["Details:", ge('specialInstructions').value];
 		//Save data to local storage: Use Stringify to convert our object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Honey Do Saved!");
@@ -103,7 +103,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
-		$('items').style.display = "block";
+		ge('items').style.display = "block";
 		for (var i=0, len=localStorage.length; i<len; i++){
 			var makeli = document.createElement('li');
 			var linksLi = document.createElement('li');
@@ -177,10 +177,10 @@ window.addEventListener("DOMContentLoaded", function(){
 		toggleControls("off");
 		
 		//populate the form fields with the current localStorage values
-		$('taskName').value 	= item.taskName[1];
-		$('groups').value 		= item.group[1];
-		$('dueDate').value 		= item.dueDate[1];
-		$('importance').value 	= item.importance[1];
+		ge('taskName').value 	= item.taskName[1];
+		ge('groups').value 		= item.group[1];
+		ge('dueDate').value 		= item.dueDate[1];
+		ge('importance').value 	= item.importance[1];
 		//Set the radio button
 		var radios = document.forms[0].priority;
 		for (var i=0; i<radios.length; i++){
@@ -192,13 +192,13 @@ window.addEventListener("DOMContentLoaded", function(){
 				radios[i].setAttribute("checked", "checked");
 			}
 		}
-		$('specialInstructions').value = item.specialInstructions[1];
+		ge('specialInstructions').value = item.specialInstructions[1];
 		
 		//Remove listener from the input "Save Task" button
 		//save.removeEventListener("click", storeData);
 		//Change Save button to Save Changes
-		$('submit').value = "Save Changes";
-		var editSubmit = $('submit');
+		ge('submit').value = "Save Changes";
+		var editSubmit = ge('submit');
 		//Save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when we save the data we edited
 		editSubmit.addEventListener("click", validate);
@@ -219,10 +219,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	function validate(e) {
 		//Define the elements that we want to check
-		var getTaskName = $('taskName');
-		var getGroup = $('groups');
-		var getDueDate = $('dueDate');
-		var getSpecialInstructions = $('specialInstructions');
+		var getTaskName = ge('taskName');
+		var getGroup = ge('groups');
+		var getDueDate = ge('dueDate');
+		var getSpecialInstructions = ge('specialInstructions');
 		
 		//Reset error messages
 		errMsg.innerHTML = "";
@@ -293,17 +293,17 @@ window.addEventListener("DOMContentLoaded", function(){
 	//Variable defaults
 	var locations = ["-Choose a Location-", "Home", "Office", "Car", "Shop", "Errand"],
 		priorityValue,
-		errMsg = $('errors');
+		errMsg = ge('errors');
 
 	//Run the makeList function to create the location dropdown
 	makeList();
 
 	//Set Link & Submit Click Events
-	var displayLink = $('displayLink');
+	var displayLink = ge('displayLink');
 	displayLink.addEventListener("click", getData);
-	var clearLink = $('clear');
+	var clearLink = ge('clear');
 	clearLink.addEventListener("click", clearLocal);
-	var save = $('submit');
+	var save = ge('submit');
 	save.addEventListener("click", validate);
 
 });
