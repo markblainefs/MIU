@@ -27,31 +27,6 @@ p {
 	font-weight: bold;
 }
 
-#homeBody img {
-	position:relative;
-	bottom:-10px;
-}
-
-#carBody img {
-	position:relative;
-	bottom:-5px;
-}
-
-#officeBody img {
-	position:relative;
-	bottom:-10px;
-}
-
-#errandBody img {
-	position:relative;
-	bottom:-10px;
-}
-
-#shopBody img {
-	position:relative;
-	bottom:-10px;
-}
-
 #browse img {
 	margin: 0 0 0 0;
 }
