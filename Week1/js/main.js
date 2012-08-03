@@ -1,6 +1,5 @@
 //Mark A. Blaine
-//VFW 1207
-//JavaScript for Project 3
+//MIU 1208
 
 //Wait until DOM is ready
 window.addEventListener("DOMContentLoaded", function(){

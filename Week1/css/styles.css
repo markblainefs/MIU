@@ -1,7 +1,7 @@
 /*
-CSS for VFW 1207
+CSS for MIU 1208
 Mark A. Blaine
-July 2012
+August 2012
 */
 
 body {	
@@ -25,6 +25,15 @@ h2 {
 
 p {
 	font-weight: bold;
+}
+
+#categoryBody img {
+	position:relative;
+	bottom:-10px;
+}
+
+#browse img {
+	margin: 0 0 0 0;
 }
 
 legend {
