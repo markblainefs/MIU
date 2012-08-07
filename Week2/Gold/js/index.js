@@ -26,9 +26,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	var getSearch = function(e) {
 		//Fill localStorage if it is empty
 		if (localStorage.length===0){
-			for(var n in json){
+			for(var p in json){
 			var id = Math.floor(Math.random()*1000000001);
-			localStorage.setItem(id,JSON.stringify(json[n]));
+			localStorage.setItem(id,JSON.stringify(json[p]));
 			}
 		}
 		//Hide Browse items
