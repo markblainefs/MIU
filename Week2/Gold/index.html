@@ -33,10 +33,10 @@
 		</div>
 		
 		<!--The seach block-->
-		<div id="search">
-			<label for="searchText">Find Task:</label><input type="text" id="searchTask" />
-			<input type="submit" value="Search" id="find" />
-		</div>
+		<form action = "#" method = "post" id="searchForm" />
+			<label for="searchText">Find Task:</label><input type="text" id="search" />
+			<input type="submit" value="Search" id="searchBtn" />
+		</form>
 		
 		<!--Browse by category-->
 		<div id="browse">
@@ -58,6 +58,9 @@
 			<a href = "errand.html">
 				<img src="images/buttonErrand.png" alt="Errand" width=100% />
 			</a>
+		</div>
+		<div id="error">
+			<br /> Your search returned 0 matches
 		</div>
 		<script src="js/index.js" type="text/javascript"></script>
 	</body>
