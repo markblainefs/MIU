@@ -34,6 +34,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		//Hide Browse items
 		ge('searchForm').style.display = "none";
 		ge('browse').style.display = "none";
+		var match = false;
 		var term = ge('search').value;
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
@@ -51,6 +52,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			var obj = JSON.parse(value);
 			for (q in obj){
 				if (term === obj[q][1]){
+					var match = true;
 					var makeSubList = document.createElement('ul');
 					makeli.appendChild(makeSubList);
 					getImage(obj.group[1],makeSubList);
@@ -61,11 +63,13 @@ window.addEventListener("DOMContentLoaded", function() {
 						makeSubli.innerHTML = optSubText;
 						makeSubList.appendChild(linksLi);
 					}
-				} else {
-					ge('error').style.display = "block";
 				}
 			}
 		}
+		if (!match){
+			ge('error').style.display = "block";
+		}
+
 		e.preventDefault();
 
 	}
