@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	
-	<title>Mobile Site Template</title>
+	<title>Honey Do</title>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
@@ -15,7 +15,8 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
-	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -23,9 +24,100 @@
 </head>
 <body>
 
+	<div data-role="page" id="main" data-theme="a">
 	
+		<div data-role="header" data-position="fixed">
+			<h1>Honey Do Tasks</h1>
+		</div>
+		
+		<div data-role="content">
+			<h4>Keep track of domestic assignments<h4>
+			<ul data-role="listview">
+				<li><a href="additem.html" data-ajax="false">
+					<img src="images/starCircle.gif">
+					<h3>Be A Star</h3>
+					<p>Add a Honey Do</p>
+				</a></li>
+			</ul>
+			<br />
+			<ul data-role="listview" data-inset="true" data-filter="false">
+				<li data-role="list-divider">
+					Browse current assignments
+				</li>
+				<li><a href="home.html" data-ajax="false">
+					<img src="images/Home.png" />
+					<h3>Home</h3>
+					<p>Stuff to do at home</p>
+				</a></li>
+				<li><a href="car.html" data-ajax="false">
+					<img src="images/Car.png" />
+					<h3>Car</h3>
+					<p>Work to do on the car</p>
+				</a></li>
+				<li><a href="office.html" data-ajax="false">
+					<img src="images/Office.png" />
+					<h3>Office</h3>
+					<p>To do at the office</p>
+				</a></li>
+				<li><a href="errand.html"data-ajax="false">
+					<img src="images/Errand.png" />
+					<h3>Errands</h3>
+					<p>Errands to run</p>
+				</a></li>
+				<li><a href="shop.html" data-ajax="false">
+					<img src="images/Shop.png" />
+					<h3>Shopping</h3>
+					<p>Shopping to do</p>
+				</a></li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="main">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Main</a></li>
+					<li><a href="additem.html" data-ajax="false">New</a></li>
+					<li><a href="#list">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+
+	<div data-role="page" id="list" data-add-back-btn="true" data-theme="a">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Honey Do List</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul data-role="listview">
+				<li>
+					<img src="images/Home.png" />
+					<h3>Home</h3>
+					<p>Stuff to do at home</p>
+				</li>
+				<li>Car</li>
+				<li>Office</li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#list" data-icon="star" class="ui-btn-active">List</a></li>
+					<li><a href="#list" data-icon="star">List</a></li>
+					<li><a href="#list" data-icon="star">List</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
 
 	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>
