@@ -1,0 +1,12 @@
+Mark A. Blaine
+MIU 1208
+Week 2
+
+Repository:
+https://github.com/markblainefs/MIU/tree/working/Week2
+
+Gold App
+http://markblainefs.github.com/MIU/Week2/Gold/
+
+Bronze App
+http://markblainefs.github.com/MIU/Week2/Bronze
