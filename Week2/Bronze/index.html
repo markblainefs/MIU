@@ -41,36 +41,34 @@
 			</ul>
 			<br />
 			<br />
-			<ul data-role="listview" data-inset="true" data-filter="true">
+			<ul data-role="listview" data-inset="true" data-filter="false">
 				<li data-role="list-divider">
 					Browse current assignments
 				</li>
-				<li><a href="home.html" data-ajax="false">
-					<img src="images/Home.png" />
-					<h3>Home</h3>
-					<p>Stuff to do at home</p>
-				</a></li>
-				<li><a href="car.html" data-ajax="false">
-					<img src="images/Car.png" />
-					<h3>Car</h3>
-					<p>Work to do on the car</p>
-				</a></li>
-				<li><a href="office.html" data-ajax="false">
-					<img src="images/Office.png" />
-					<h3>Office</h3>
-					<p>To do at the office</p>
-				</a></li>
-				<li><a href="errand.html"data-ajax="false">
-					<img src="images/Errand.png" />
-					<h3>Errands</h3>
-					<p>Errands to run</p>
-				</a></li>
-				<li><a href="shop.html" data-ajax="false">
-					<img src="images/Shop.png" />
-					<h3>Shopping</h3>
-					<p>Shopping to do</p>
-				</a></li>
 			</ul>
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<a href="home.html" data-ajax="false">
+						<img src="images/Home.png" /></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="car.html" data-ajax="false">
+						<img src="images/Car.png" /></a>
+					</div>
+					<div class="ui-block-c">
+						<a href="office.html" data-ajax="false">
+						<img src="images/Office.png" /></a>
+					</div>
+					<div class="ui-block-a">
+						<a href="errand.html" data-ajax="false">
+						<img src="images/Errand.png" /></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="shop.html" data-ajax="false">
+						<img src="images/Shop.png" /></a>
+					</div>
+
+				</div>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="main">
@@ -79,8 +77,8 @@
 					<li><a href="#main">Main</a></li>
 					<li><a href="additem.html" data-ajax="false">Add</a></li>
 					<li><a href="#info">Info</a></li>
-					<li><a href="#news">News</a></li>
-					<li><a href="markblainefs.github.com/MIU/Week2/Bronze/index.html">Bronze</a></li>
+					<li><a href="#news">Weird</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Gold</a></li>
 				</ul>
 			</div>
 		</div>
@@ -94,25 +92,13 @@
 		</div>
 		
 			<div data-role="content">
-			
-				<div data-role="collapsible-set">
-				
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Author</h3>
-						<p>Mark A. Blaine</p>
-						<p>Full Sail University</p>
-					</div>
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Course</h3>
-						<p>Mobile Interface Usability</p>
-						<p>Session 1208</p>
-					</div>
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>About</h3>
-						<p>The purpose of this application is to demonstrate how to use a CRUD as well as implementing the jquery mobile framework</p>
-					</div>
-	
-				</div>
+							
+				<a href="#author" data-role="button">Author</a>
+				<a href="#course" data-role="button">Course</a>
+				<a href="#about" data-role="button">About</a>
+				<a href="https://github.com/markblainefs/MIU/tree/working/Week2" data-role="button" data-ajax="false">GitHub Repository</a>
+				<a href="../Gold/index.html" data-role="button" data-ajax="false">Gold App</a>
+
 				
 			</div>
 		
@@ -122,8 +108,112 @@
 					<li><a href="#main">Main</a></li>
 					<li><a href="additem.html" data-ajax="false">Add</a></li>
 					<li><a href="#info">Info</a></li>
-					<li><a href="#news">News</a></li>
-					<li><a href="markblainefs.github.com/MIU/Week2/Bronze/index.html">Bronze</a></li>
+					<li><a href="#news">Weird</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Gold</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+
+	<div data-role="page" id="author" data-add-back-btn="true" data-theme="a">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Honey Do Info</h1>
+		</div>
+		
+		<div data-role="content">
+							
+			<h3>Author</h3>				
+			<p>Mark A. Blaine</p>
+			<p>Full Sail University</p>
+
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="main">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Main</a></li>
+					<li><a href="additem.html" data-ajax="false">Add</a></li>
+					<li><a href="#info">Info</a></li>
+					<li><a href="#news">Weird</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Gold</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+
+	<div data-role="page" id="course" data-add-back-btn="true" data-theme="a">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Honey Do Info</h1>
+		</div>
+		
+			<div data-role="content">
+							
+				<h3>Course</h3>
+				<p>Mobile Interface Usability</p>
+				<p>Session 1208</p>
+
+			</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="main">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Main</a></li>
+					<li><a href="additem.html" data-ajax="false">Add</a></li>
+					<li><a href="#info">Info</a></li>
+					<li><a href="#news">Weird</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Gold</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="about" data-add-back-btn="true" data-theme="a">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Honey Do Info</h1>
+		</div>
+		
+		<div data-role="content">
+							
+			<h3>About</h3>
+			<p>The purpose of this application is to demonstrate how to use a CRUD as well as implementing the jquery mobile framework</p>
+
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="main">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Main</a></li>
+					<li><a href="additem.html" data-ajax="false">Add</a></li>
+					<li><a href="#info">Info</a></li>
+					<li><a href="#news">Weird</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Gold</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div data-role="page" id="news" data-add-back-btn="true" data-theme="a">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Honey Do News</h1>
+		</div>
+		
+		<div id="rssFeed"></div>
+		
+		<div data-role="footer" data-position="fixed" data-id="main">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Main</a></li>
+					<li><a href="additem.html" data-ajax="false">Add</a></li>
+					<li><a href="#info">Info</a></li>
+					<li><a href="#news">Weird</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Gold</a></li>
 				</ul>
 			</div>
 		</div>
@@ -133,7 +223,10 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js" type="text/javascript"></script>
+	<script src="js/zrss/jquery.zrssfeed.min.js" type="text/javascript"></script>
+	<script src="js/rss.js"></script>
+
 
 </body>
 </html>
