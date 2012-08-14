@@ -1,0 +1,74 @@
+<!doctype html>
+<!--MIU Week 1-->
+<!--Mark A. Blaine - MIU 1208-->
+<html>
+	<head>
+	
+		<!--Meta data-->
+		<meta charset="utf-8" />
+		<meta name="keywords" content="list, to do, errands" />
+		<meta name="description" content="Form for Honey Do input" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<link rel="stylesheet" href="css/custom.css"
+	
+		<!--Page title-->
+		<title>Honey Do</title>
+		
+	</head>
+	
+	<body>
+	
+		<header>
+			<h1>			
+				<img src="images/starCircle.gif" alt="Circle Star" height="35" width="35" />
+				Honey Do
+				<img src="images/starCircle.gif" alt="Circle Star" height="35" width="35" />
+			</h1>
+		</header>
+		<!--Form data-->
+		<form id="honeyForm" action="#" method ="post">
+			<fieldset>
+				<legend>What To Do</legend>
+				<!--Text input-->
+				<div id="textFields">
+					<ul id="errors"></ul>
+					<ul id="questions">
+						<li><label for="taskName">Task name:</label><input type="text" id="taskName" /></li>
+						<li id="select"><label for="location">Location:</label></li>
+						<!--Date input-->
+						<li><label for="dueDate">Due date:</label><input type="date" id="dueDate" /></li>
+						<!--Range input-->
+						<li><label for="importance">Importance:</label><input type="range" id="importance" min="1" max="10" /></li>
+					</ul>
+				</div>
+				<!--Radio input-->
+				<div id="radios">
+					Because:<br/>
+					<input type="radio" checked id="low" value="I'm awesome" name="priority" /><label for="low"> I'm awesome</label><br/>
+					<input type="radio" id="medium" value="I need to" name="priority" /><label for="medium"> I need to</label><br/>
+					<input type="radio" id="high" value="I'm in trouble" name="priority" /><label for="high"> I'm in trouble</label><br/>
+					<input type="hidden" id="forHoney" name="honey" value="Me" />
+				</div>
+				<br/>
+				<!--Textarea input-->
+				<div id="instructions">
+					<label for="specialInstructions">Details:</label><br/>
+					<textarea id="specialInstructions" rows="3" cols="35"></textarea><br/>
+				</div>
+				<input type="submit" value="Add To List" id="submit" /><br/>				
+			</fieldset>
+		</form>
+		<br/>
+		<nav>
+			<a href = "#" id="clear">Clear stored data</a> 
+			<a href="#" id="displayLink">Display data</a>
+			<a href="additem.html" id="addNew" style="display:none;">Add new item</a><br/><br/>
+		</nav>
+		<!--Disappearing header for list view-->
+		<h2 id="listHeader" style="display:none;">Honey Do List</h2>
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		
+	</body>
+</html>
