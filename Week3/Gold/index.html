@@ -1,4 +1,4 @@
-<!doctype html>  
+<!DOCTYPE html>  
 <html lang="en">
 <head>
 
@@ -33,7 +33,7 @@
 		<div data-role="content">
 			<h4>Keep track of domestic assignments<h4>
 			<ul data-role="listview">
-				<li><a href="additem.html" data-ajax="false">
+				<li><a href="#addItem">
 					<img src="images/starCircle.gif">
 					<h3>Be A Star</h3>
 					<p>Add a Honey Do</p>
@@ -77,7 +77,7 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#main">Main</a></li>
-					<li><a href="additem.html" data-ajax="false">Add</a></li>
+					<li><a href="#addItem" data-ajax="false">Add</a></li>
 					<li><a href="#info">Info</a></li>
 					<li><a href="#news">Weird</a></li>
 					<li><a href="../Bronze/index.html" data-ajax="false">Bronze</a></li>
@@ -119,7 +119,7 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#main">Main</a></li>
-					<li><a href="additem.html" data-ajax="false">Add</a></li>
+					<li><a href="#addItem" data-ajax="false">Add</a></li>
 					<li><a href="#info">Info</a></li>
 					<li><a href="#news">Weird</a></li>
 					<li><a href="../Bronze/index.html" data-ajax="false">Bronze</a></li>
@@ -141,7 +141,86 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#main">Main</a></li>
-					<li><a href="additem.html" data-ajax="false">Add</a></li>
+					<li><a href="#addItem" data-ajax="false">Add</a></li>
+					<li><a href="#info">Info</a></li>
+					<li><a href="#news">Weird</a></li>
+					<li><a href="../Bronze/index.html" data-ajax="false">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div data-role="page" id="addItem" data-add-back-btn="true" data-theme="a">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Add Honey Do</h1>
+		</div>
+				
+			<div data-role="content">
+			
+				<form action="" method="post" id="addItemForm">
+					<div data-role="fieldcontain">
+						<label for="taskName">*Task Name:</label>
+						<input type="text" name="taskName" id="taskName" class="required"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="dueDate">*Due Date:</label>
+						<input type="date" name="dueDate" id="dueDate" class="required"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="details">Details:</label>
+						<textarea>Details of the task go here</textarea>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="location">Location:</label>
+						<select name="location" id="location" data-native-menu="false" class="required">
+							<option value="Home">Home</option>
+							<option value="Car">Car</option>
+							<option value="Office">Office</option>
+							<option value="Errand">Errand</option>
+							<option value="Shop">Shopping</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="importance">Importance:</label>
+						<input type="range" name="importance" id="importance" value="5" min="0" max="10" />
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend>
+								Reason:
+							</legend>
+							<input type="radio" value="I am awesome" name="reason" id="task1" class="required"/>
+							<label for="task1">I am awesome</label>
+							<input type="radio" value="I need to" name="reason" id="task2" />
+							<label for="task2">I need to</label>
+							<input type="radio" value="I am in trouble" name="reason" id="task3" />
+							<label for="task3">I am in trouble</label>
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend>
+								Status:
+							</legend>
+							<input type="checkbox" value="done" name="status" id="status" />
+							<label for="status">Done!</label>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<input type="submit" value="Create Honey Do" data-theme="b"/>
+					</div>
+				</form>
+			
+			</div>	
+				
+		<div data-role="footer" data-position="fixed" data-id="main">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Main</a></li>
+					<li><a href="#addItem" data-ajax="false">Add</a></li>
 					<li><a href="#info">Info</a></li>
 					<li><a href="#news">Weird</a></li>
 					<li><a href="../Bronze/index.html" data-ajax="false">Bronze</a></li>
@@ -154,8 +233,9 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js" type="text/javascript"></script>
-	<script src="js/zrss/jquery.zrssfeed.min.js" type="text/javascript"></script>
+	<script src="js/zrss/jquery.zrssfeed.min.js"></script>
 	<script src="js/rss.js"></script>
+	<script src="js/libs/jquery.validate.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
