@@ -1,0 +1,11 @@
+Mark A. Blaine
+MIU 1208 Week Four
+
+Link to repo
+https://github.com/markblainefs/MIU/tree/working/Week4
+
+Live Gold App
+http://markblainefs.github.com/MIU/Week4/Gold/
+
+Live Bronze App
+http://markblainefs.github.com/MIU/Week4/Bronze/
